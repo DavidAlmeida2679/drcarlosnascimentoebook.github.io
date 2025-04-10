@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odontologia Sem Trauma - Ebooks Gratuitos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sem Medo,<br>Sem Dor e<br>Sem trauma</h1>
+            <p>Baixe nossos ebooks e transforme sua experiência no dentista.</p>
+            
+            <div class="video-container">
+                <img src="video-thumbnail.jpg" alt="Vídeo explicativo" class="video-thumbnail">
+                <div class="play-button"></div>
+            </div>
+            <p>Assista ao vídeo e conheça nosso trabalho!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="appointment-section">
+            <div class="appointment-card">
+                <h2>Agende sua Consulta</h2>
+                <p>Transforme sua experiência odontológica hoje mesmo</p>
+                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn whatsapp-btn-appointment" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <div class="ebooks">
+            <div class="ebook-card">
+                <h2>Pare de Ter Medo do Dentista:</h2>
+                <h3>Enfrentar a Odontofobia</h3>
+                <ul>
+                    <li>Entendendo a Odontofobia</li>
+                    <li>Benefícios da Sedação Consciente</li>
+                </ul>
+                <button class="btn ebook-btn" data-ebook="odontofobia">Quero Meu Ebook</button>
+            </div>
+
+            <div class="ebook-card">
+                <h2>Guia Prático para Pais:<br>Preparando Seu Filho</h2>
+                <h3>Uma experiência sem medo, sem dor e sem trauma</h3>
+                <ul>
+                    <li>Preparando Crianças com TEA ou PcD para Consultas Odontológicas</li>
+                    <li>Como transformar a ida ao dentista numa experiência tranquila</li>
+                </ul>
+                <button class="btn ebook-btn" data-ebook="pais-pcd">Quero Meu Ebook</button>
+            </div>
+        </div>
+        <section class="testimonials">
+            <h2>Depoimentos</h2>
+            <div class="testimonial-grid">
+                <!-- DEPOENTE 1 -->
+                <div class="testimonial-card">
+                    <img src="fotos-depoentes/alexandra.jpg" alt="Alexandra" loading="lazy">
+                    <p>"Sou suspeita para falar porque sempre fui muito bem atendida. O tratamento fez toda a diferença na minha vida."</p>
+                    <span class="author">- Alexandra, Rio de Janeiro</span>
+                </div>
+    
+                <!-- DEPOENTE 2 -->
+                <div class="testimonial-card">
+                    <img src="fotos-depoentes/jaldenira.jpg" alt="Dona Jaldenira" loading="lazy">
+                    <p>"Aconselho a todos ter coragem e vir. Porque não dói, não dói não!"</p>
+                    <span class="author">- Dona Jaldenira, RJ</span>
+                </div>
+    
+                <!-- DEPOENTE 3 -->
+                <div class="testimonial-card">
+                    <img src="fotos-depoentes/jessica.jpg" alt="Jéssica" loading="lazy">
+                    <p>"Tenho fobia de agulhas e dentista. Depois que conheci o Dr.Carlos posso tratar meu dente através da sedação."</p>
+                    <span class="author">- Jéssica, Rio</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Em breve: VideoBook e Gibi em Áudio para crianças!</p>
+            <p>© 2025 Odontologia Sem Trauma. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="modal" id="ebookModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle">Baixe seu Ebook Gratuito</h2>
+            <form id="ebookForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" required>
+                    <div class="error" id="nameError">Por favor, insira seu nome</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                    <div class="error" id="emailError">Por favor, insira um e-mail válido</div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone com DDD</label>
+                    <input type="tel" id="phone" required>
+                    <div class="error" id="phoneError">Por favor, insira um telefone válido com DDD</div>
+                </div>
+                <input type="hidden" id="ebookType">
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            <div class="success-message" id="successMessage">
+                <p>Seu ebook será enviado ao seu e-mail em instantes!</p>
+                <p>Verifique sua caixa de spam caso não encontre.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
